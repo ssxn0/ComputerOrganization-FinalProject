@@ -111,6 +111,7 @@ touch fb_rp.hh
 nano fb_rp.hh
 ```
 `Ctrl+S Ctrl+Z`
+
 3. 修改以下檔案
 - `GEM5/src/mem/cache/replacement_policies/ReplacementPolicies.py`
 - `GEM5/src/mem/cache/replacement_policies/SConscript`
