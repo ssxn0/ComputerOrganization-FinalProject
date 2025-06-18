@@ -142,7 +142,7 @@ scons EXTRAS=../NVmain build/X86/gem5.opt
 -c ../benchmark/multiply --cpu-type=TimingSimpleCPU \
 --caches --l1i_size=32kB --l1i_assoc=4 --l1d_size=32kB --l1d_assoc=4 --l2cache --l2_size=128kB --l2_assoc=4 \
 --l3cache --l3_size=1MB --l3_assoc=4 --mem-type=NVMainMemory \
---nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_WB.txt
+--nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_before.txt
 ```
 5. run(writethrough)
 ```
@@ -150,5 +150,5 @@ scons EXTRAS=../NVmain build/X86/gem5.opt
 -c ../benchmark/multiply --cpu-type=TimingSimpleCPU \
 --caches --l1i_size=32kB --l1i_assoc=4 --l1d_size=32kB --l1d_assoc=4 --l2cache --l2_size=128kB --l2_assoc=4 \
 --l3cache --l3_size=1MB --l3_assoc=4 --mem-type=NVMainMemory \
---nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_WT.txt
+--nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_after.txt
 ```
