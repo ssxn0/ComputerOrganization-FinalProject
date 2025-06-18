@@ -101,11 +101,9 @@ touch fb_rp.cc
 touch fb_rp.hh
 ```
 2. 修改以下檔案
-`GEM5/src/mem/cache/replacement_policies/ReplacementPolicies.py`
-
-`GEM5/src/mem/cache/replacement_policies/SConscript`
-
-`GEM5/configs/common/Caches.py`
+- `GEM5/src/mem/cache/replacement_policies/ReplacementPolicies.py`
+- `GEM5/src/mem/cache/replacement_policies/SConscript`
+- `GEM5/configs/common/Caches.py`
 4. 重新編譯
 ```
 scons EXTRAS=../NVmain build/X86/gem5.opt
