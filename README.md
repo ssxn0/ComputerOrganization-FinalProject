@@ -93,14 +93,18 @@ gcc --static quicksort.c -o quicksort
 ```
 
 ### Q4. Modify last level cache policy based on frequency based replacement policy (15%)
-1. 加入以下檔案
+1. 進入多重資料夾
+```
+src/mem/cache/replacement_policies
+```
+2. 加入以下檔案
 ```
 touch fb_rp.cc
 ```
 ```
 touch fb_rp.hh
 ```
-2. 修改以下檔案
+3. 修改以下檔案(nano)
 - `GEM5/src/mem/cache/replacement_policies/ReplacementPolicies.py`
 - `GEM5/src/mem/cache/replacement_policies/SConscript`
 - `GEM5/configs/common/Caches.py`
@@ -108,7 +112,7 @@ touch fb_rp.hh
 ```
 scons EXTRAS=../NVmain build/X86/gem5.opt
 ```
-4.  run(frequency based policy)
+5.  run(frequency based policy)
 ```
 ./build/X86/gem5.opt configs/example/se.py \
 -c ../benchmark/quicksort --cpu-type=TimingSimpleCPU \
@@ -116,7 +120,7 @@ scons EXTRAS=../NVmain build/X86/gem5.opt
 --l3cache --l3_size=1MB --l3_assoc=2 --mem-type=NVMainMemory \
 --nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_FB.txt
 ```
-5. run(orifinal policy)
+6. run(orifinal policy)
 ```
 ./build/X86/gem5.opt configs/example/se.py \
 -c ../benchmark/quicksort --cpu-type=TimingSimpleCPU \
