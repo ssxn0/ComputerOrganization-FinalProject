@@ -13,7 +13,7 @@ cd xxx
 1. 編譯工具
 ```
 sudo apt install build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler
-libprotoc-dev libgoogle-perftools-dev python3-dev python3-six python libboost-all-dev pkgconfig
+libprotoc-dev libgoogle-perftools-dev python3-dev python3-six python libboost-all-dev pkg-config
 ```
 2. 安裝GEM5
 3. 丟資料夾並解壓縮
