@@ -108,7 +108,7 @@ touch fb_rp.hh
 ```
 scons EXTRAS=../NVmain build/X86/gem5.opt
 ```
-4.  run(fullWays)
+4.  run(frequency based policy)
 ```
 ./build/X86/gem5.opt configs/example/se.py \
 -c ../benchmark/quicksort --cpu-type=TimingSimpleCPU \
@@ -116,7 +116,7 @@ scons EXTRAS=../NVmain build/X86/gem5.opt
 --l3cache --l3_size=1MB --l3_assoc=2 --mem-type=NVMainMemory \
 --nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config > cmdlog_FB.txt
 ```
-5. run(2Ways)
+5. run(orifinal policy)
 ```
 ./build/X86/gem5.opt configs/example/se.py \
 -c ../benchmark/quicksort --cpu-type=TimingSimpleCPU \
