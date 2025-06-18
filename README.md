@@ -39,7 +39,7 @@ for arg in sys.argv:
 9. 還原前面nvmain sconscript註解掉的指令
 10. 混合編譯GEM5
 ```
-scons build/X86/gem5.opt -j$(nproc)
+scons EXTRAS=../NVmain build/X86/gem5.opt
 ```
 11. 測試HELLOWORLD
 ```
