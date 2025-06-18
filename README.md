@@ -55,9 +55,9 @@ scons EXTRAS=../NVmain build/X86/gem5.opt
 1. 修改以下檔案
 - `GEM5/configs/common/Caches.py`
 - `GEM5/configs/common/Options.py`
+- `GEM5/configs/common/CacheConfig.py`
 - `GEM5/src/cpu/BaseCPU.py`
 - `GEM5/src/mem/XBar.py`
-- `GEM5/configs/common/CacheConfig.py`
 2. 重新compile
 ```
 scons EXTRAS=../NVmain build/X86/gem5.opt
