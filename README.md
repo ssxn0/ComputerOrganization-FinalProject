@@ -97,14 +97,21 @@ gcc --static quicksort.c -o quicksort
 ```
 src/mem/cache/replacement_policies
 ```
-2. 加入以下檔案
+2. 加入以下檔案並修改
 ```
 touch fb_rp.cc
 ```
 ```
+nano fb_rp.cc
+```
+```
 touch fb_rp.hh
 ```
-3. 修改以下檔案(nano)
+```
+nano fb_rp.hh
+```
+`Ctrl+S Ctrl+Z`
+3. 修改以下檔案
 - `GEM5/src/mem/cache/replacement_policies/ReplacementPolicies.py`
 - `GEM5/src/mem/cache/replacement_policies/SConscript`
 - `GEM5/configs/common/Caches.py`
