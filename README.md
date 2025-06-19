@@ -26,22 +26,18 @@ scons build/X86/gem5.opt -j8
 git clone https://github.com/SEAL-UCSB/NVmain
 ```
 6. 修改 SCONSCRIPT，進入nvmain資料夾 點開 SConscript 把36行的from gem5_scons import Transform註解掉
-7. 編譯NVMAIN
-```
-scons --build-type=fast
-```
-8. 修改GEM5 OPTIONS，在gem5/configs/common/Options.py中第133行加入下段程式
+7. 修改GEM5 OPTIONS，在gem5/configs/common/Options.py中第133行加入下段程式
 ```
 for arg in sys.argv:
   if arg[:9] == "--nvmain-":
   parser.add_option(arg, type="string", default="NULL", help="Set NVMain configuration value for a parameter")
 ```
-9. 還原前面nvmain sconscript註解掉的指令
-10. 混合編譯GEM5
+8.還原前面nvmain sconscript註解掉的指令
+9. 混合編譯GEM5
 ```
 scons EXTRAS=../NVmain build/X86/gem5.opt
 ```
-11. 測試HELLOWORLD
+10.測試HELLOWORLD
 ```
 ./build/X86/gem5.opt configs/example/se.py \
   -c tests/test-progs/hello/bin/x86/linux/hello \
